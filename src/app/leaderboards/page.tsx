@@ -1,4 +1,4 @@
-import { CardTitle } from "@/components/ui/card";
+import { CardTitle } from "./src/components/ui/card";
 export default function Leaderboards() {
   return (
     <>

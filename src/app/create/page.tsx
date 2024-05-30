@@ -1,10 +1,15 @@
 "use client";
 import { useState, useContext } from "react";
-import { userContext } from "@/components/UserContext";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { Card, CardTitle, CardHeader, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
+import { userContext } from "./src/components/UserContext";
+import { Textarea } from "./src/components/ui/textarea";
+import { Button } from "./src/components/ui/button";
+import {
+  Card,
+  CardTitle,
+  CardHeader,
+  CardContent,
+} from "./src/components/ui/card";
+import { Input } from "./src/components/ui/input";
 import {
   Select,
   SelectContent,

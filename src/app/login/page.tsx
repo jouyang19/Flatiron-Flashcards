@@ -1,9 +1,14 @@
 "use client";
 import { useContext, useState } from "react";
-import { userContext } from "@/components/UserContext";
-import UserDecks from "@/components/UserDecks";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { userContext } from "./src/components/UserContext";
+import UserDecks from "./src/components/UserDecks";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+} from "./src/components/ui/card";
+import { Button } from "./src/components/ui/button";
 
 export default function Login() {
   const [username, setUsername] = useState("");
