@@ -42,7 +42,7 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <img
-                src="/createdeck.jpeg"
+                src="https://github.com/jouyang19/Flatiron-Flashcards/blob/main/public/createdeck.jpeg?raw=true"
                 alt="a demo picture of creating a new deck"
               />
             </CardContent>
@@ -59,7 +59,10 @@ export default function Home() {
               </h2>
             </CardHeader>
             <CardContent className="max-w-xl">
-              <img src="/cardview.jpeg" alt="placeholder" />
+              <img
+                src="https://github.com/jouyang19/Flatiron-Flashcards/blob/main/public/cardview.jpeg?raw=true"
+                alt="placeholder"
+              />
             </CardContent>
             <CardFooter>
               <Button>
@@ -72,7 +75,10 @@ export default function Home() {
               <h2 className="font-bold">Log In for Community Benefits</h2>
             </CardHeader>
             <CardContent>
-              <img src="/loginpage.jpeg" alt="placeholder" />
+              <img
+                src="https://github.com/jouyang19/Flatiron-Flashcards/blob/main/public/loginpage.jpeg?raw=true"
+                alt="placeholder"
+              />
             </CardContent>
             <CardFooter>
               <Button>
