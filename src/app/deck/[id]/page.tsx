@@ -4,11 +4,8 @@ import { userContext } from "@/components/UserContext";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
 
-const Deck = ({ params }) => {
-  const { id } = params;
-  const { isShared, setIsShared } = useContext(userContext);
-
-  console.log(params);
+const DeckViewer = () => {
+  const { currentDeck } = useContext(userContext);
 
   const [deck, setDeck] = useState({});
   const [front, setFront] = useState("");
@@ -18,41 +15,17 @@ const Deck = ({ params }) => {
   const [isFinished, setIsFinished] = useState(false);
 
   useEffect(() => {
-    if (isShared) {
-      fetch(`http://localhost:3000/decks/${id}`)
-        .then((response) => response.json())
-        .then((deck) => {
-          setDeck(deck);
-          if (deck.flashcards && deck.flashcards.length > 0) {
-            setFront(deck.flashcards[0].front);
-          }
-        });
-    } else if (!isShared) {
-      fetch(`http://localhost:3000/userdecks/${id}`)
-        .then((response) => response.json())
-        .then((deck) => {
-          setDeck(deck);
-          if (deck.flashcards && deck.flashcards.length > 0) {
-            setFront(deck.flashcards[0].front);
-          }
-        });
+    setDeck(currentDeck);
+    if (currentDeck.flashcards && currentDeck.flashcards.length > 0) {
+      setFront(currentDeck.flashcards[0].front);
     }
-  }, []);
-
-  useEffect(() => {
-    fetch(`http://localhost:3000/decks/${id}`)
-      .then((response) => response.json())
-      .then((deck) => {
-        setDeck(deck);
-        if (deck.flashcards && deck.flashcards.length > 0) {
-          setFront(deck.flashcards[0].front);
-        }
-      });
-  }, [id]);
+  });
 
   function showBack() {
-    setBack(deck.flashcards[count].back);
-    setShowingBack(true);
+    if (deck.flashcards && deck.flashcards.length > 0) {
+      setBack(deck.flashcards[count].back);
+      setShowingBack(true);
+    }
   }
 
   function nextCard() {
@@ -74,10 +47,12 @@ const Deck = ({ params }) => {
   }
 
   function showFront() {
-    setFront(deck.flashcards[0].front);
-    setBack("");
-    setShowingBack(false);
-    setIsFinished(false);
+    if (deck.flashcards && deck.flashcards.length > 0) {
+      setFront(deck.flashcards[0].front);
+      setBack("");
+      setShowingBack(false);
+      setIsFinished(false);
+    }
   }
 
   return (
@@ -115,4 +90,4 @@ const Deck = ({ params }) => {
   );
 };
 
-export default Deck;
+export default DeckViewer;

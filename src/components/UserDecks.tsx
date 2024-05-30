@@ -33,7 +33,12 @@ export default function UserDecks({ user }) {
 
   return decks.map((deck) => (
     <>
-      <Deck key={deck.id} deck={deck} handleDelete={handleDelete} />
+      <Deck
+        key={deck.id}
+        deck={deck}
+        handleDelete={handleDelete}
+        isShared={false}
+      />
     </>
   ));
 }

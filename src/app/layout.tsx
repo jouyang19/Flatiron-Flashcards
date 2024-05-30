@@ -9,7 +9,7 @@ import { MyProvider } from "@/components/UserContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Flashcard App",
+  title: "Flatiron Flashcards",
   description: "by Jamal Ouyang",
 };
 

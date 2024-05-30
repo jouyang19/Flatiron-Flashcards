@@ -12,6 +12,7 @@ import SharedDecks from "@/components/sharedDecks";
 import UserDecks from "@/components/UserDecks";
 import { useContext } from "react";
 import { userContext } from "@/components/UserContext";
+import Deck from "@/components/Deck";
 
 export default function Home() {
   const { user } = useContext(userContext);
@@ -19,7 +20,7 @@ export default function Home() {
   return (
     <>
       <h1 className="text-center pt-4 font-bold">
-        Welcome to FlashcardLite App
+        Welcome to Flatiron Flashcards!
       </h1>
       <br />
       <h2 className="font-bold pt-2 text-center">Recent Shared Decks</h2>

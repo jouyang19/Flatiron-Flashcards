@@ -13,12 +13,13 @@ export default function Login() {
 
   function validateForm(data) {
     const errors = { name: "", pass: "" };
+    console.log("validateForm errors object", errors);
 
     if (!data.name) {
       errors.name = "Username is required";
-    } else if (!/^[a-zA-Z\s'-]+$/.test(data.name.trim())) {
+    } else if (!/^[a-zA-Z0-9\s'-]+$/.test(data.name.trim())) {
       errors.name =
-        "Username can only contain letters, spaces, hyphens, and apostrophes.";
+        "Username can only contain letters, numbers, spaces, hyphens, and apostrophes.";
     }
     if (!data.pass) {
       errors.pass = "Password is required";
@@ -31,15 +32,21 @@ export default function Login() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    console.log("Submit!");
+    setErrors({});
+
     const validationErrors = validateForm({
       name: event.target.username.value,
       pass: event.target.password.value,
     });
 
-    if (Object.keys(validationErrors).length === 0) {
+    console.log(Object.values(validationErrors));
+
+    if (validationErrors.name === "" && validationErrors.pass === "") {
       fetch("http://localhost:3000/users")
         .then((response) => response.json())
         .then((users) => {
+          console.log("fetching", users);
           const user = users.find(
             (user) =>
               user.username === event.target.username.value &&

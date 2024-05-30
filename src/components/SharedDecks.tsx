@@ -2,7 +2,7 @@ import Deck from "./Deck";
 import { useEffect, useState, useContext } from "react";
 import { userContext } from "./UserContext";
 
-export default function SharedDecks() {
+export default function SharedDecks({ isShared }) {
   const [decks, setDecks] = useState([]);
 
   const { setIsShared } = useContext(userContext);
@@ -30,7 +30,12 @@ export default function SharedDecks() {
 
   return decks.map((deck) => (
     <>
-      <Deck key={deck.id} deck={deck} handleDelete={handleDelete} />
+      <Deck
+        key={deck.id}
+        deck={deck}
+        handleDelete={handleDelete}
+        isShared={true}
+      />
     </>
   ));
 }
