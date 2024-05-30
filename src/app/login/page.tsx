@@ -43,7 +43,7 @@ export default function Login() {
     console.log(Object.values(validationErrors));
 
     if (validationErrors.name === "" && validationErrors.pass === "") {
-      fetch("http://localhost:3000/users")
+      fetch("https://flatiron-flashcards-backend.onrender.com/users")
         .then((response) => response.json())
         .then((users) => {
           console.log("fetching", users);
@@ -66,7 +66,7 @@ export default function Login() {
           });
           setIsShared(false);
         } else {
-          fetch("http://localhost:3000/users", {
+          fetch("https://flatiron-flashcards-backend.onrender.com/users", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

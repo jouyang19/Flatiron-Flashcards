@@ -8,7 +8,7 @@ export default function UserDecks({ user }) {
   const [decks, setDecks] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/userdecks`)
+    fetch(`https://flatiron-flashcards-backend.onrender.com/userdecks`)
       .then((response) => response.json())
       .then((decks) => {
         const userDecks = decks.filter((deck) => deck.user === user);
@@ -18,7 +18,7 @@ export default function UserDecks({ user }) {
   }, []);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:3000/userdecks/${id}`, {
+    fetch(`https://flatiron-flashcards-backend.onrender.com/userdecks/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
