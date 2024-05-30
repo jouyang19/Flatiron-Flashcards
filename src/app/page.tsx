@@ -42,13 +42,13 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <img
-                src="/create.jpeg"
+                src="/createdeck.jpeg"
                 alt="a demo picture of creating a new deck"
               />
             </CardContent>
             <CardFooter>
               <Button>
-                <Link href="/create">Create giDeck</Link>
+                <Link href="/create">Create Deck</Link>
               </Button>
             </CardFooter>
           </Card>
