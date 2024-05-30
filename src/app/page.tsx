@@ -12,7 +12,6 @@ import SharedDecks from "@/components/SharedDecks";
 import UserDecks from "@/components/UserDecks";
 import { useContext } from "react";
 import { userContext } from "@/components/UserContext";
-import Image from "next/image";
 
 export default function Home() {
   const { user } = useContext(userContext);
@@ -42,13 +41,9 @@ export default function Home() {
               <h2 className="font-bold">Create New Deck</h2>
             </CardHeader>
             <CardContent>
-              <Image
+              <img
                 src="/images/create.jpeg"
                 alt="a demo picture of creating a new deck"
-                layout="responsive"
-                width={500}
-                height={300}
-                className="w-100 object-contain"
               />
             </CardContent>
             <CardFooter>
@@ -64,14 +59,7 @@ export default function Home() {
               </h2>
             </CardHeader>
             <CardContent className="max-w-xl">
-              <Image
-                src="/images/card.jpeg"
-                alt="placeholder"
-                layout="responsive"
-                width={500}
-                height={300}
-                className="w-100 object-contain"
-              />
+              <img src="/images/card.jpeg" alt="placeholder" />
             </CardContent>
             <CardFooter>
               <Button>
@@ -84,14 +72,7 @@ export default function Home() {
               <h2 className="font-bold">Log In for Community Benefits</h2>
             </CardHeader>
             <CardContent>
-              <Image
-                src="/images/login.jpeg"
-                alt="placeholder"
-                layout="responsive"
-                width={500}
-                height={300}
-                className="w-100 object-contain"
-              />
+              <img src="/images/login.jpeg" alt="placeholder" />
             </CardContent>
             <CardFooter>
               <Button>
