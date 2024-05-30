@@ -1,6 +1,6 @@
 "use client";
-import { CardTitle } from "./src/components/ui/card";
-import SharedDecks from "./src/components/sharedDecks";
+import { CardTitle } from "@/components/ui/card";
+import SharedDecks from "*/components/sharedDecks";
 import { useEffect } from "react";
 
 export default function Shared() {

@@ -7,11 +7,12 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import Link from "next/link";
-import { Button } from "./src/components/ui/button";
-import SharedDecks from "./src/components/sharedDecks";
-import UserDecks from "./src/components/UserDecks";
+import { Button } from "@/components/ui/button";
+import SharedDecks from "@/components/sharedDecks";
+import UserDecks from "@/components/UserDecks";
 import { useContext } from "react";
-import { userContext } from "./src/components/UserContext";
+import { userContext } from "@/components/UserContext";
+import Deck from "@/components/Deck";
 
 export default function Home() {
   const { user } = useContext(userContext);

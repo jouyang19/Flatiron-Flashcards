@@ -1,13 +1,8 @@
 "use client";
 import { useState, useEffect, useContext } from "react";
-import { userContext } from "./src/components/UserContext";
-import { Button } from "./src/components/ui/button";
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardTitle,
-} from "./src/components/ui/card";
+import { userContext } from "@/components/UserContext";
+import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
 
 const DeckViewer = () => {
   const { currentDeck } = useContext(userContext);
