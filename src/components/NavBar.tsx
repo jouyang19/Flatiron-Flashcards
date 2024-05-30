@@ -1,8 +1,6 @@
 "use client";
 import React, { useContext } from "react";
 import Link from "next/link";
-import { SheetTrigger, Sheet, SheetContent, SheetClose } from "./ui/sheet";
-import { Button } from "./ui/button";
 import { ModeToggle } from "./ModeToggle";
 import { userContext } from "./UserContext";
 
@@ -15,44 +13,12 @@ const NavBar = () => {
         <span className="text-lg font-semibold">Flashcards</span>
       </Link>
       <ModeToggle />
-      <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+      <nav className="md:flex items-center gap-6 text-sm font-medium">
         <Link href="/">Home</Link>
         <Link href="/create">Create</Link>
         <Link href="/shared">Shared</Link>
         <Link href="/login">{user.isLoggedIn ? "Your Account" : "Log In"}</Link>
       </nav>
-      <Sheet>
-        <SheetTrigger asChild>
-          <Button className="md:hidden" size="icon" variant="outline">
-            <MenuIcon className="h-6 w-6" />
-            <span className="sr-only">Toggle navigation menu</span>
-          </Button>
-        </SheetTrigger>
-        <SheetContent side="right">
-          <div className="grid gap-4 p-6">
-            <SheetClose asChild>
-              <Link className="font-medium hover:underline" href="/">
-                Home
-              </Link>
-            </SheetClose>
-            <SheetClose asChild>
-              <Link className="font-medium hover:underline" href="/create">
-                Create
-              </Link>
-            </SheetClose>
-            <SheetClose asChild>
-              <Link className="font-medium hover:underline" href="/shared">
-                Shared
-              </Link>
-            </SheetClose>
-            <SheetClose asChild>
-              <Link className="font-medium hover:underline" href="/login">
-                {user.isLoggedIn ? "Your Account" : "Log In"}
-              </Link>
-            </SheetClose>
-          </div>
-        </SheetContent>
-      </Sheet>
     </div>
   );
 };
