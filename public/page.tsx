@@ -42,13 +42,13 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <img
-                src="/images/create.jpeg"
+                src="/create.jpeg"
                 alt="a demo picture of creating a new deck"
               />
             </CardContent>
             <CardFooter>
               <Button>
-                <Link href="/create">Create Deck</Link>
+                <Link href="/create">Create giDeck</Link>
               </Button>
             </CardFooter>
           </Card>
@@ -59,7 +59,7 @@ export default function Home() {
               </h2>
             </CardHeader>
             <CardContent className="max-w-xl">
-              <img src="/images/card.jpeg" alt="placeholder" />
+              <img src="/cardview.jpeg" alt="placeholder" />
             </CardContent>
             <CardFooter>
               <Button>
@@ -72,7 +72,7 @@ export default function Home() {
               <h2 className="font-bold">Log In for Community Benefits</h2>
             </CardHeader>
             <CardContent>
-              <img src="/images/login.jpeg" alt="placeholder" />
+              <img src="/loginpage.jpeg" alt="placeholder" />
             </CardContent>
             <CardFooter>
               <Button>
