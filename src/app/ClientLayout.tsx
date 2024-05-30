@@ -1,7 +1,11 @@
 "use client";
-import React from "react";
-import { MyProvider } from "./src/components/UserContext";
+import React, { FC, ReactNode } from "react";
+import { MyProvider } from "@/components/UserContext";
 
-export const ClientLayout = ({ children }) => {
+interface ClientLayoutProps {
+  children: ReactNode;
+}
+
+export const ClientLayout: FC<ClientLayoutProps> = ({ children }) => {
   return <MyProvider>{children}</MyProvider>;
 };
