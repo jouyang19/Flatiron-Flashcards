@@ -11,7 +11,7 @@ Flatiron Flashcards is a web application developed as a Phase 2 project for the 
 - Create and manage flashcard decks
 - Study flashcards with a simple interface
 - Share decks with other users
-- User authentication system
+- Mock User authentication system
 - Responsive design for various screen sizes
 
 ## Technologies Used
