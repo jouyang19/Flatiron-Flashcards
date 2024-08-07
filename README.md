@@ -60,7 +60,7 @@ Flatiron Flashcards is a web application developed as a Phase 2 project for the 
 
 ### Running the Backend
 
-This project uses a JSON server for the backend. To start it:
+This project uses a JSON server for the backend (https://github.com/jouyang19/Flatiron-Flashcards-json-server). To start it:
 
 1. Open a new terminal window
 2. Navigate to the backend directory
