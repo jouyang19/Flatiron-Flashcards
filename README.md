@@ -1,49 +1,97 @@
 # Flatiron Flashcards
 
-Basic flashcard app with mock login, add or delete decks, and create public or private decks.
+![Flatiron Flashcards Home](public/flatiron_flashcards_home.png)
 
-## Stretch Goals
+## Description
 
-Spaced Repetition using the FSRS library, work in progress...
+Flatiron Flashcards is a web application developed as a Phase 2 project for the Flatiron School Full Stack Software Engineering Bootcamp. This app allows users to create, manage, and study flashcards, with features for both personal and shared decks.
+
+## Features
+
+- Create and manage flashcard decks
+- Study flashcards with a simple interface
+- Share decks with other users
+- User authentication system
+- Responsive design for various screen sizes
+
+## Technologies Used
+
+- React
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Shadcn UI Components
+- JSON Server (for mock backend)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js (v14 or later)
+- npm or yarn
 
-Also, don't forget to run a json server with the basic layout seen either in the frontend code or in my json-server-template repository:
+### Installation
 
-```bash
-npm run dev
-```
+1. Clone the repository:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```
+   git clone https://github.com/your-username/flatiron-flashcards.git
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. Navigate to the project directory:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```
+   cd flatiron-flashcards
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   ```
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Start the development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   ```
+   npm run dev
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Running the Backend
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This project uses a JSON server for the backend. To start it:
+
+1. Open a new terminal window
+2. Navigate to the backend directory
+3. Run the following command:
+   ```
+   npm run dev
+   ```
+
+## Usage
+
+- Create an account or log in
+- Browse shared decks on the home page
+- Create your own decks in the "Create" section
+- Study flashcards by clicking on a deck
+- Manage your decks in the user dashboard
+
+## Future Enhancements
+
+- Implement spaced repetition using the FSRS library
+- Add more interactive study modes
+- Improve user statistics and progress tracking
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Acknowledgments
+
+- Flatiron School for the project opportunity
+- The open-source community for the amazing tools and libraries used in this project

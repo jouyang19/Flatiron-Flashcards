@@ -14,10 +14,16 @@ const NavBar = () => {
       </Link>
       <ModeToggle />
       <nav className="md:flex items-center gap-6 text-sm font-medium">
-        <Link href="/">Home</Link>
-        <Link href="/create">Create</Link>
-        <Link href="/shared">Shared</Link>
-        <Link href="/login">{user.isLoggedIn ? "Your Account" : "Log In"}</Link>
+        <div className="flex-1">
+          <Link href="/">Home</Link>
+        </div>
+        <div className="md:flex md:items-center md:gap-6 text-right space-y-4 md:space-y-0">
+          <Link href="/create">Create</Link>
+          <Link href="/shared">Shared</Link>
+          <Link href="/login">
+            {user.isLoggedIn ? "Your Account" : "Log In"}
+          </Link>
+        </div>
       </nav>
     </div>
   );

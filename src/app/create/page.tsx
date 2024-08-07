@@ -43,7 +43,7 @@ export default function Create() {
     };
 
     if (user.isLoggedIn && !isShared) {
-      fetch("https://flatiron-flashcards-backend.onrender.com/userdecks", {
+      fetch("http://localhost:3000/userdecks", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -65,7 +65,7 @@ export default function Create() {
           console.error("Error:", error);
         });
     } else {
-      fetch("https://flatiron-flashcards-backend.onrender.com/decks", {
+      fetch("http://localhost:3000/decks", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

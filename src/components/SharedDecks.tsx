@@ -8,7 +8,7 @@ export default function SharedDecks({ isShared }) {
   const { setIsShared } = useContext(userContext);
 
   useEffect(() => {
-    fetch("https://flatiron-flashcards-backend.onrender.com/decks")
+    fetch("http://localhost:3000/decks")
       .then((response) => response.json())
       .then((decks) => {
         setDecks(decks);
@@ -17,7 +17,7 @@ export default function SharedDecks({ isShared }) {
   }, []);
 
   const handleDelete = (id) => {
-    fetch(`https://flatiron-flashcards-backend.onrender.com/decks/${id}`, {
+    fetch(`http://localhost:3000/decks/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
