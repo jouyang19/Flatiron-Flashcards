@@ -83,14 +83,6 @@ This project uses a JSON server for the backend (https://github.com/jouyang19/Fl
 - Add more interactive study modes
 - Improve user statistics and progress tracking
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ## Acknowledgments
 
 - Flatiron School for the project opportunity
